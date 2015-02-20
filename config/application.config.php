@@ -4,8 +4,11 @@ return array(
     'modules' => array(
         'DoctrineModule',
         'DoctrineORMModule',
+        'DoctrineDataFixtureModule',
+        'JMSSerializerModule',
         'Application',
         'User',
+        'Rest'
     ),
 
     // These are various options for the listeners attached to the ModuleManager

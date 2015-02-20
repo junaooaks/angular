@@ -106,5 +106,12 @@ return array(
                 ),
             ),
         ),
+        'fixture'=>array(
+        __NAMESPACE__.'_fixture'=>__DIR__.'/../src/Application/Fixture'
+        ),
     ),
+    
+//    'data-fixtures'=>array(
+//        __NAMESPACE__.'_fixture'=>__DIR__.'/../src/Application/Fixture'
+//    )
 );

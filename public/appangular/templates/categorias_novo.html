@@ -1,0 +1,27 @@
+<h3>Adicionar nova categoria</h3>
+
+<form class="form-horizontal" ng-submit="add(item)">
+<!-- Text input-->
+<div class="control-group">
+  <label class="col-sm-2 control-label" for="nome">Nome</label>
+  <div class="col-sm-10">
+      <input type="text" name="nome" id="nome" ng-model="item.nome" required="required" class="form-control">
+  </div>
+</div>
+<!-- Text input-->
+<!--div class="control-group">
+  <label class="col-sm-2 control-label" for="descricao">Descrição</label>
+  <div class="col-sm-10">
+    <input type="text" name="descricao" id="descricao" ng-model="item.descricao" required="required" class="form-control">
+  </div-->
+</div>
+
+<!-- Button -->
+<div class="control-group">
+   <div class="controls">
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a href="#/categorias" class="btn btn-default">Voltar</a>
+  </div>
+</div>
+
+</form>
