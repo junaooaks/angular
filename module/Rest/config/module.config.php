@@ -3,7 +3,8 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'categoria'=>'Rest\Controller\CategoriaController'
+            'categoria'=>'Rest\Controller\CategoriaController',
+            'produto' => 'Rest\Controller\ProdutoController'
         )
     ),
     'router' => array(

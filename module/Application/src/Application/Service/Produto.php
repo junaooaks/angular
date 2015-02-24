@@ -20,9 +20,10 @@ class Produto {
                 ->getReference('Application\Entity\Categoria', $data['categoriaId']);
         
         $produto = new ProdutoEntity;
-        $produto->setNome('macbook 15')
-                ->setDescricao('super maquina')
-                ->setCategoria($categoriaEntity);
+        $produto->setNome($data['nome'])
+            ->setDescricao($data['descricao'])
+            ->setCategoria($categoriaEntity);
+
 
         $this->em->persist($produto);
         $this->em->flush();
@@ -30,17 +31,15 @@ class Produto {
         return $produto;
     }
 
-    public function update(array $data) {
+    public function update(array $data)
+    {
         $categoriaEntity = $this->em
-                ->getReference('Application\Entity\Categoria', $data['categoriaId']);
-        
-        $produto = $this->em
-                ->getReference('Application\Entity\Produto', $data['id']);
-        
+            ->getReference('Application\Entity\Categoria', $data['categoriaId']);
+
+        $produto = $this->em->getReference('Application\Entity\Produto', $data['id']);
         $produto->setNome($data['nome'])
-                ->setDescricao($data['descricao'])
-                ->setCategoria($categoriaEntity);
-        
+            ->setDescricao($data['descricao'])
+            ->setCategoria($categoriaEntity);
 
         $this->em->persist($produto);
         $this->em->flush();
